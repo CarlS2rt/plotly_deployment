@@ -37,6 +37,8 @@ function buildMetadata(sample) {
     // Filter the data for the object with the desired sample number
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
+    var washingFreq = result.wfreq;
+    console.log(washingFreq);
     // Use d3 to select the panel with id of `#sample-metadata`
     var PANEL = d3.select("#sample-metadata");
 
@@ -69,8 +71,7 @@ function buildCharts(sample) {
     var sampleIds =  sampleResult.otu_ids;
     var sampleLabel = sampleResult.otu_labels;
     var sampleValue = sampleResult.sample_values;
-    var washingFreq = result.wfreq;
-    console.log(washingFreq);
+
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
