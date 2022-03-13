@@ -87,7 +87,7 @@ function buildCharts(sample) {
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       name: "Top 10 Belly Button Cultures Found",
-      xaxis:{
+      yaxis:{
         autorange:'reversed'}
       
     };
