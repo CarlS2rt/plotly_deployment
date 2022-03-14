@@ -131,7 +131,7 @@ function buildCharts(sample) {
       type: "indicator",
       mode: "gauge+number",
         gauge: {
-        axis: {range: [null,20], tickwidth: 2, tickcolor: "darkblue"},
+        axis: {range: [null,10], tickwidth: 2, tickcolor: "darkblue"},
         bar: {color: "darkblue"},
         bgcolor: "white",
         borderwidth: 2,
