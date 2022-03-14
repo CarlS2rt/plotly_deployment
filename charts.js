@@ -125,16 +125,41 @@ function buildCharts(sample) {
     Plotly.newPlot('bubble',bubbleData, bubbleLayout); 
 
     // 4. Create the trace for the gauge chart.
-    var gaugeData = [
-     
-    ];
+    var gaugeData = [{
+      value: washingFreq,
+      type: "indicator",
+      mode: "gauge+number",
+        gauge: {
+        axis: {range: [null,20], tickwidth: 2, tickcolor: "darkblue"},
+        bar: {color: "darkblue"},
+        bgcolor: "white",
+        borderwidth: 2,
+        bordercolor: "gray",
+        steps: [
+            {range: [0,2], color: "cyan"},
+            {range: [2,4], color: "royalblue"},
+            {range: [4,6], color: "blue"},
+            {range: [6,8], color: "blueviolet"},
+            {range: [8,10], color: "mediumvioletred"}
+        ],
+        threshold: {
+          line: {color: "red", width: 4},
+          thickness: 0.50,
+          value: 9
+        }
+      }
+    }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-     
+      title: {text: "Belly Button Washing Frequency <br> Scrubs per Week"},
+      width: 500,
+      height: 400,
+      paper_bgcolor: "lavender",
+      font: {color: "darkblue"}
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot();
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
 }
