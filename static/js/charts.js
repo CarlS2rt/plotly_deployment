@@ -90,7 +90,8 @@ function buildCharts(sample) {
     }];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Belly Button Cultures Found"
+      title: "Top 10 Belly Button Cultures Found",
+      paper_bgcolor: "lavender"
       // yaxis:{
       //   autorange:'reversed'}
       
@@ -116,6 +117,7 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures per Sample",
       hovermode: 'closest',
+      paper_bgcolor: "lavender",
       xaxis: {
         title: 'OTU ID'
       }
